@@ -1,2 +1,0 @@
-# Sudoku
-Automatic Sudoku solver
