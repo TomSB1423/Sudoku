@@ -1,3 +1,4 @@
+# Working 9x9 Sudoku solver
 import numpy as np
 # sudoku grid 9x9
 grid = [

@@ -1,6 +1,7 @@
+# Attempt at an nxn sudoku solver. However very inefficient.
 import numpy as np
-# sudoku grid 9x9
 
+# Grids
 grid_3x3 = [
     [1, 0, 0],
     [0, 0, 0],
@@ -40,8 +41,6 @@ grid = np.asarray(grid_3x3)
 
 
 # find possible numbers that could be inserted into space
-
-
 def find_size(grid):
     if np.asarray(grid).shape[0] % 3 == 0 and np.asarray(grid).shape[1] % 3 == 0:
         size = np.asarray(grid).shape[0]
@@ -79,9 +78,8 @@ def possibilities(y, x, size):
             num_list.append(square_list[i])
     return num_list
 
+
 # replace each missing value
-
-
 def replace(grid, size):
     # loop in y
     for y in range(0, size):

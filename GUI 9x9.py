@@ -1,5 +1,5 @@
 import pygame
-from _9x9_Sudoku import *
+from Sudoku_9x9 import *
 # from 9x9_Sudoku import possibilities, replace
 
 
