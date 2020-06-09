@@ -19,11 +19,11 @@ completed_grid = grid
 
 def possibilities(y, x):
     num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    # find numbers in corrosponding y axis
+    # find numbers in corresponding y axis
     for i in range(0, 9):
         if grid[y][i] in num_list:
             num_list.remove(grid[y][i])
-    # find numbers in corrosponding x axis
+    # find numbers in corresponding x axis
     for j in range(0, 9):
         if grid[j][x] in num_list:
             num_list.remove(grid[j][x])
@@ -56,4 +56,7 @@ def replace(grid):
 
 
 # call the function
+print("Solving:")
+print(np.matrix(grid))
+print("Answer:")
 print(replace(completed_grid))
