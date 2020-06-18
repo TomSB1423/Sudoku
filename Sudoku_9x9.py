@@ -14,9 +14,9 @@ grid = [
 ]
 
 completed_grid = grid
+
+
 # find possible numbers that could be inserted into space
-
-
 def possibilities(y, x):
     num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     # find numbers in corresponding y axis
@@ -35,10 +35,10 @@ def possibilities(y, x):
                 num_list.remove(grid_check)
     return num_list
 
+
 # replace each missing value
-
-
 def replace(grid):
+    global count
     # loop in y
     for y in range(0, 9):
         # loop in x
@@ -53,10 +53,13 @@ def replace(grid):
                         grid[y][x] = 0
                 final = np.matrix(grid)
                 return final
+    print(np.matrix(completed_grid))
+    input("Find more solutions?")
 
 
 # call the function
 print("Solving:")
 print(np.matrix(grid))
 print("Answer:")
-print(replace(completed_grid))
+replace(completed_grid)
+print("There are no more solutions")

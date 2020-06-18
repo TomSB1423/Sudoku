@@ -37,7 +37,7 @@ grid_12x12 = [
 
 
 # Change grid array here
-grid = np.asarray(grid_3x3)
+grid = np.asarray(grid_9x9)
 
 
 # find possible numbers that could be inserted into space
